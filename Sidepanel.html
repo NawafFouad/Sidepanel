@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="Side.css">
+
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    
+
+<!-- main layout -->
+<main class="v-center">
+  
+  
+    <div>
+  
+      <h1>
+        Off-Canvas Modal Panel
+      </h1>
+      <p>
+        This modal panel will transition in from the right side, and cover half the screen. For mobile screens it will cover all but 60px.
+      </p>
+      <p>
+        Because the modal panel is full height, scrolling the inner content will feel natural for users, when there is need for a scrollbar. It is also a great pattern for responsive designs.
+      </p>
+  
+      <br>
+  
+      <a
+         href="#" 
+         class="button green js-trigger-modal" 
+         data-modal-source="modal-content-a" 
+      >
+        Trigger Modal<br>
+        (Content A)
+      </a>
+  
+      <br>
+      <br>
+  
+      <a
+         href="#" 
+         class="button yellow js-trigger-modal" 
+         data-modal-source="modal-content-b" 
+      >
+        Trigger Modal<br>
+        (Content B)
+      </a>
+      
+    </div>
+    
+    
+    
+  
+  </main>
+  <!-- / main layout -->
+  
+  
+  
+  
+  
+  <!-- modal -->
+  <section class="modal">
+  
+      <!-- modal content wrapper -->
+      <div 
+          id="modal-content" 
+          class="modal-content "
+      >
+  
+  
+          <!-- modal wrapper is empty
+              hidden content lower in the doc 
+              is injected into this wrapper
+          -->
+              
+  
+      </div>
+      <!-- / modal content wrapper -->
+  
+  
+      <!-- Overlay layer - 
+          using an element for this 
+          so its easily clickable -->
+      <div class="overlay"></div>
+  
+  
+  </section>
+  <!-- / modal -->
+  
+  
+  
+  
+  
+  <!-- hidden -->
+  <div class="hidden">
+  
+  
+  
+  
+      <!-- modal content a -->
+      <div 
+          id="modal-content-a"
+      >
+  
+          <div 
+              class="modal-content-inner "
+          >
+  
+  
+              <!-- bottom row -->
+              <div class="row top">
+                  <div class="cell">
+                          
+                      <!-- closes modal and continues this path -->
+                      <!-- <a 
+                          class="button full-width green dismiss-modal" 
+                      >
+                          Close Modal
+                      </a> -->
+  
+                  </div>
+              </div>
+  
+  
+  
+              <!-- flex row -->
+              <div class="row">
+                  <div class="cell">
+  
+                      <div class="gutters">
+  
+                          <h1>
+                              Modal Content A
+                          </h1>
+                          <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum sed arcu eu pretium. Suspendisse efficitur tincidunt felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam vel ultricies erat. Suspendisse orci nisl, pellentesque vitae nunc eget, interdum sagittis urna. Pellentesque quis nunc eu orci malesuada tempor vel et ipsum. Ut bibendum ornare nulla vel laoreet. Integer blandit quam nisi, sit amet condimentum ex imperdiet a. Nullam sodales non ligula ac molestie. Phasellus ante risus, dapibus quis ultricies sit amet, facilisis non leo.
+                          </p>
+                          <p>
+                              Quisque maximus porttitor ultrices. Etiam eu massa eu risus dignissim viverra et at ex. Mauris facilisis sit amet est in hendrerit. Ut ut nunc erat. Nulla sit amet tincidunt orci. Duis mollis leo orci, et consequat arcu pretium vel. Proin at lacinia libero. Nam efficitur, felis in pretium efficitur, erat purus iaculis risus, sed mattis lorem urna a ligula. Quisque sodales ligula in consectetur convallis. Etiam sed orci lectus. Curabitur eget velit pharetra, luctus diam in, aliquet velit.
+                          </p>
+                          <p>
+                              Proin ut libero a est suscipit varius. Quisque aliquet vulputate commodo. Nulla lobortis magna id dolor molestie interdum. Vestibulum dignissim sodales pharetra. Pellentesque vel ante nibh. Proin maximus lorem ac viverra elementum. Integer dictum odio auctor dictum rhoncus. Nam et augue in odio posuere blandit nec eget elit. Nam quis sapien ut purus bibendum ornare. Duis mattis viverra dolor, quis egestas magna tincidunt eget.
+                          </p>
+                          <p>
+                              Aliquam erat volutpat. Fusce in ante odio. Nullam nec sollicitudin ipsum. Nulla elit elit, tincidunt vitae pharetra ac, gravida rutrum nisi. Sed a magna euismod, vestibulum purus sit amet, vestibulum urna. Etiam fermentum, lectus et facilisis lacinia, neque dolor pellentesque justo, et commodo orci ante sit amet nisl. Nunc accumsan ante non erat porttitor vulputate. Ut facilisis tristique consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                          </p>
+                          <p>
+                              Maecenas consectetur velit sit amet tellus tincidunt rhoncus. Nunc malesuada nibh diam, vel accumsan sapien rhoncus vel. Aliquam hendrerit condimentum convallis. Aliquam suscipit, ex at blandit gravida, elit sapien fringilla enim, eget pellentesque ipsum velit at felis. Nulla interdum nulla dolor, eget ultrices diam gravida sed. Ut tempus non diam ut imperdiet. Donec vel mollis felis.
+                          </p>
+  
+                      </div>
+  
+                  </div>
+              </div>
+  
+  
+  
+              <!-- bottom row -->
+              <div class="row bottom">
+                  <div class="cell">
+                          
+                      <!-- closes modal and continues this path -->
+                      <!-- <a 
+                          class="button full-width green dismiss-modal" 
+                      >
+                          Close Modal
+                      </a> -->
+  
+                  </div>
+              </div>
+  
+              
+  
+          </div>
+  
+      </div>
+      <!-- / modal content a -->
+  
+  
+  
+  
+      <!-- modal content b -->
+      <div 
+          id="modal-content-b"
+      >
+  
+          <div 
+              class="modal-content-inner "
+          >
+  
+  
+              <!-- bottom row -->
+              <div class="row top">
+                  <div class="cell">
+                          
+                      <!-- closes modal and continues this path -->
+                      <!-- <a 
+                          class="button full-width yellow dismiss-modal" 
+                      >
+                          Close Modal
+                      </a> -->
+  
+                  </div>
+              </div>
+  
+  
+  
+              <!-- flex row -->
+              <div class="row">
+                  <div class="cell">
+  
+                      <div class="gutters">
+  
+                          <h1>
+                              Modal Content B
+                          </h1>
+                          <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum sed arcu eu pretium. Suspendisse efficitur tincidunt felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam vel ultricies erat. Suspendisse orci nisl, pellentesque vitae nunc eget, interdum sagittis urna. 
+                          </p>
+  
+                      </div>
+  
+                  </div>
+              </div>
+  
+  
+  
+              <!-- bottom row -->
+              <div class="row bottom">
+                  <div class="cell">
+                          
+                      <!-- closes modal and continues this path -->
+                      <a 
+                          class="button full-width yellow dismiss-modal" 
+                      >
+                          Close Modal
+                      </a>
+  
+                  </div>
+              </div>
+  
+  
+  
+          </div>
+  
+      </div>
+      <!-- / modal content b -->
+  
+  
+  
+  
+  </div>
+  <!-- / hidden -->
+  
+  
+  
+  
+  
+  
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="Side.js"></script>
+  </body>
+</html>

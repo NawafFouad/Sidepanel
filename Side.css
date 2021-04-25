@@ -1,0 +1,300 @@
+
+
+/* Demo Layout Styles
+----------------------------------------*/
+body {
+    background: #e5e5e5;
+    
+    min-height: 100vh;
+  }
+  main {
+    min-height: 100vh;
+    max-width: 500px;
+    margin: 0 auto;
+    
+    color: #555;
+    
+    /* padding: 60px; */
+    
+    text-align: center;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  main > div {
+    padding: 24px;
+  }
+  
+  
+  /* Button Styles
+  ----------------------------------------*/
+  
+  /* Base Button - White */
+  .button {
+      display: inline-block;
+  
+      font-size: 14px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+    text-align: center;
+    font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 20px 28px;
+  
+      color: #222;
+      text-decoration: none;
+  
+      background-color: #fff;
+  
+      -webkit-transition: 
+          all 0.2s ease-out 0.05s;
+      transition: 
+          all 0.2s ease-out 0.05s;
+  
+      /*border: 4px solid green;*/
+  }
+  .button.full-width {
+    width: 100%;
+  }
+  .button:hover,
+  .touch .button:focus {
+      color: #222;
+      background-color: #e9e9e9;
+  
+      box-shadow: 0px 0px 3px rgba(0,0,0,0.15);
+  }
+  
+  /* Green Button */
+  .button.green {
+      color: #fff;
+  
+      background-color: #1E988A;
+  }
+  .button.green:hover,
+  .touch .button.green:focus {
+      color: #fff;
+      background-color: #006BB6; /* med. blue hover */
+  }
+  
+  /* Yellow Button */
+  .button.yellow {
+      color: #fff;
+  
+      background-color: #C1B900;
+  }
+  .button.yellow:hover,
+  .touch .button.yellow:focus {
+      color: #fff;
+      background-color: #D49000; /* orange hover */
+  }
+  
+  
+  /* Vertical Centering 
+  ----------------------------------------*/
+  .v-center {
+    /* using flexbox for vertical centering, and add a fallback if IE9 support is needed */
+      
+      /* Flexbox display */
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      
+      /* Horizontal alignment */
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      
+      /* Vertical alignment */
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+  }
+  
+  
+  /* Layout classes
+  ----------------------------------------*/
+  .gutters {
+    padding: 24px;
+  }
+  .hidden {
+    display: none;
+  }
+  
+  
+  
+  /* Modal - Off-Canvas Panel
+  ----------------------------------------*/
+  .modal,
+  .modal-content,
+  .modal .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 300;
+  }
+  .modal {
+      overflow: hidden;
+      position: fixed;
+      opacity: 0.0;
+  
+      -webkit-transform: translate(100%,0%);
+      transform: translate(100%,0%);
+  
+      -webkit-transition: -webkit-transform 0s linear 0s;
+      transition: transform 0s linear 0s;
+  }
+  .modal .overlay {
+      z-index: 0;
+      background: rgba(0,0,0,0.20);
+  
+      opacity: 0.0;
+  
+      -webkit-transition: opacity 300ms ease-out 150ms;
+      transition: opacity 300ms ease-out 150ms;
+  }
+  
+  
+  .modal-content {
+      right: 0;
+      left: 60px; /* 60px */
+      z-index: 1;
+  
+      overflow-y: scroll;
+  
+      background: #fff;
+    
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+  
+      
+    
+    /* no motion on outro - transition is instant */
+    -webkit-transition: -webkit-transform 0s linear 0s;
+      transition: transform 0s linear 0s;
+  }
+  @media (min-width: 641px) {
+      .modal-content {
+        left: 50%;
+      }
+  }
+  
+  /* show the modal */
+  .show-modal .modal {
+      opacity: 1.0;
+  
+    transform: translate(0%,0%);
+    -webkit-transform: translate(0%,0%);
+  }
+  .show-modal .modal .overlay {
+      opacity: 1.0;
+  }
+  .show-modal .modal-content {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+  
+      /* animationed in on intro */
+      -webkit-transition: -webkit-transform 300ms ease-out 150ms;
+      transition: transform 300ms ease-out 150ms;
+  }
+  
+  
+  
+  
+  
+  
+  /* Modal - Inner Content Styling
+  ----------------------------------------*/
+  
+  .modal-content-inner h1,
+  .modal-content-inner p {
+    color: #555;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 145%;
+    
+    /* max width for a comfortable reading width */
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .modal-content-inner h1 {
+    font-size: 32px;
+    line-height: 85%;
+  }
+  .modal-content-inner a {
+    color: #006BB6;
+  }
+  
+  /* Vertically Centered Modal Layout */
+  .modal-content-inner,
+  .modal-content-inner .row,
+  .modal-content-inner .cell {
+      background: none;
+      border: none;
+      line-height: inherit !important;
+      color: inherit !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border-spacing: 0px !important;
+      border-collapse: separate;
+  }
+  .modal-content-inner .row:before,
+  .modal-content-inner .row:after {
+      /* Foundations Overrides */
+      content: "";
+      display: none;
+  }
+  .modal-content-inner {
+      display: table;
+  
+      /* needs width set to full width, incase inner-content doesn't stretch to 100% */
+      width: 100%;
+      max-width: 100%;
+      table-layout: fixed;
+      
+      min-height: calc(100vh);
+  
+      /* transitions for demo frame resizing */
+      -webkit-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s;
+  }
+  .modal-content-inner .row {
+      display: table-row;
+  }
+  .modal-content-inner .row.top,
+  .modal-content-inner .row.bottom {
+      height: 1px; /* any increment smaller than button or input height - row height will grow if content is taller than the height set with using table elements */
+  }
+  .modal-content-inner .cell {
+      display: table-cell;
+      position: relative;
+      vertical-align: middle; /* default */
+  }
+  .modal-content-inner .cell.vertical-align-top {
+      vertical-align: top;
+  }
+  .modal-content-inner .cell.vertical-align-middle {
+      vertical-align: middle;
+  }
+  .modal-content-inner .cell.vertical-align-bottom {
+      vertical-align: bottom;
+  }
+  
+  
+  
